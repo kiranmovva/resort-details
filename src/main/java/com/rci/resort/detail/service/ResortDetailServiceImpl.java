@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import com.rci.resort.detail.mapper.ResortMapper;
@@ -43,6 +44,7 @@ public class ResortDetailServiceImpl implements ResortDetailService {
 	}
 	
 	@Override
+	@Cacheable(value="resorts", key="#resordCode")
 	public ResortDetailsResponse getAvailableUnitsbyId(String resordCode) {
 		log.info("getAvailableUnitsbyId call");
 		

@@ -2,6 +2,7 @@ package com.rci.resort.detail.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 
 import com.rci.resort.detail.model.ResortDetailsResponse;
 
@@ -13,7 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 @EnableSwagger2
-public class SwaggerConfig {
+public class BeanConfig {
 	
 	@Bean
     public Docket api() { 
@@ -28,4 +29,6 @@ public class SwaggerConfig {
 	public ResortDetailsResponse getResortResponse() {
 		return new ResortDetailsResponse();
 	}
+	
+	
 }
