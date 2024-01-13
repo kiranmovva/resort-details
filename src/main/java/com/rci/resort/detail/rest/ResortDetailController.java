@@ -37,7 +37,6 @@ public class ResortDetailController {
 		return new ResponseEntity<ResortDetail>(resortSerivce.getResortDetailsbyId(resordCode),HttpStatus.OK);
 		
 	}
-	
 	@GetMapping(value="/availableUnitsByID")
 	@ApiOperation(value="availableUnits by resort ID", notes="availableUnits resort request by ID ",consumes="application/json", produces="application/json")
 	public ResponseEntity<ResortDetailsResponse>  getAvailableUnitsbyId(@RequestParam(defaultValue="3726") String resordCode) {
