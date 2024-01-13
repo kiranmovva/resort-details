@@ -13,8 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>resort-details-service</name>
 	<description>Demo project for Spring Boot</description>
-
-	<properties>
+       <properties>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
 		<ojdbc6.version>11.2.0.4.0</ojdbc6.version>
