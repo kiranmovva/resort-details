@@ -30,7 +30,6 @@ public class ResortDetailController {
 		return new ResponseEntity<List<ResortDetail>>(resortSerivce.getResortDetails(),HttpStatus.OK);
 		
 	}
-	
 	@GetMapping(value="/resortByID")
 	@ApiOperation(value="resort details by ID", notes="this is the resort request by ID ",consumes="application/json", produces="application/json")
 	public ResponseEntity<ResortDetail>  getResortDetailsbyId(@RequestParam(defaultValue="3726") String resordCode) {
